@@ -1,0 +1,34 @@
+.app_video {
+    height: 100vh;
+    position: relative;
+}
+
+.app_video > video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.app_video-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    transition: 0.5s ease;
+}
+
+.app_video-overlay_circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 1px solid  var(--color-golden);
+    opacity: 1;
+    transition: 0.5s ease-out;
+}
+
+.app_video:hover .app_video-overlay {
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.app_video:hover .app_video-overlay_circle{
+    opacity: 0.5;
+}
